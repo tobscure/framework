@@ -727,7 +727,7 @@ class Str
 
         $studly = static::studly(implode($parts));
 
-        $words = preg_split('/(?=[A-Z])/', $studly, -1, PREG_SPLIT_NO_EMPTY);
+        $words = preg_split('/(?=[A-Z])|(?<![0-9])(?=[0-9])/', $studly, -1, PREG_SPLIT_NO_EMPTY);
 
         return implode(' ', $words);
     }

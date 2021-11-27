@@ -52,6 +52,9 @@ class SupportStrTest extends TestCase
         $this->assertSame('Foo Bar', Str::headline('foo_bar'));
         $this->assertSame('Foo Bar Baz', Str::headline('foo-barBaz'));
         $this->assertSame('Foo Bar Baz', Str::headline('foo-bar_baz'));
+
+        $this->assertSame('Last 7 Days', Str::headline('last_7_days'));
+        $this->assertSame('Last 28 Days', Str::headline('last_28_days'));
     }
 
     public function testStringWithoutWordsDoesntProduceError()
